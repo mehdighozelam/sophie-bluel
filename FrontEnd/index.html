@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Sophie Bluel - Architecte d'intérieur</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Work+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+        <meta name="description" content="">
+        <script src="https://kit.fontawesome.com/a15c888155.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="./assets/style.css">
+        <script src="./assets/index.js"></script>
+    </head>
+    <body>
+        <header>
+            <nav id="top-bar" class="top-bar-design">
+                <ul>
+                    <li><a href="#"><i class="fa-sharp fa-regular fa-pen-to-square"></i>Mode édition</a></li>
+                    <li><a href="#" class="publish-btn">publier les changements</a></li>
+                </ul>
+            </nav>
+            <div class="nav-for-user">
+                <h1><span class="name-of-designer">Sophie Bluel</span><span class="job-of-designer">ARCHITECTE D'INTÉRIEUR</span></h1>
+                <nav>
+                    <ul>
+                        <li><a href="#portfolio">projets</a></li>
+                        <li><a href="#contact">contact</a></li>
+                        <li>
+                            <a class="only-guest" href="login.html">login</a>
+                            <a id="nav-logout" class="only-admin" href="#">logout</a>
+                        </li>
+                        <li><a href="https://www.instagram.com/" target="_blank"><img class="insta-logo" src="./assets/icons/instagram.png" alt="Instagram"></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <section id="introduction">
+                <div id="space-introduction-in-mode-admin">
+                    <a id ="update-description" class="only-admin update-btn" href="#"><i class="fa-sharp fa-regular fa-pen-to-square"></i>modifier</a>
+                    <h2>Designer d'espace</h2>
+                    <p>Je raconte votre histoire, je valorise vos idées. Je vous accompagne de la conception à la livraison finale du chantier.</p>
+                    <p>Chaque projet sera étudié en commun, de façon à mettre en valeur les volumes, les matières et les couleurs dans le respect de l’esprit des lieux et le choix adapté des matériaux. Le suivi du chantier sera assuré dans le souci du détail, le respect du planning et du budget.</p>
+                    <p>En cas de besoin, une équipe pluridisciplinaire peut-être constituée : architecte DPLG, décorateur(trice).</p>
+                </div>
+                <div>
+                    <img src="./assets/images/sophie-bluel.png" alt="Sophie Bluel">
+                    <a id ="update-img" class="only-admin update-btn" href="#"><i class="fa-sharp fa-regular fa-pen-to-square"></i>modifier</a>
+                </div>
+            </section>
+            <section id="portfolio">
+                <div id="space-only-admin" class="container-only-admin">
+                    <h2>Mes projets</h2>
+                    <div>
+                        <a id ="update-works" class="only-admin update-btn" href="#modal"><i class="fa-sharp fa-regular fa-pen-to-square"></i>modifier</a>
+                    </div>
+                </div>
+                <div id="all-filters" class="filters"></div>
+                <div class="gallery"></div>
+            </section>
+            <section id="contact">
+                <h2>Contact</h2>
+                <p>Vous avez un projet ? Discutons-en !</p>
+                <form action="#" method="post">
+                    <label for="name">Nom</label>
+                    <input type="text" name="name" id="name">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email">
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message"  cols="30" rows="10"></textarea>
+                    <input type="submit" value="Envoyer" disabled>
+                </form>
+            </section>
+        </main>
+        <footer>
+            <nav>
+                <ul>
+                    <li><a href="#">Mentions légales</a></li>
+                </ul>
+            </nav>
+        </footer>
+        <!-- Creation modal -->
+        <div id="modal" class="modal-overlay" aria-hidden="true" role="dialog" aria-labelledby= "title-modal-overlay">
+            <div id="modal-works" class="modal-gallery">
+                <a id="button-to-close-first-window" href="#" class="modal-close"><i class="fa-solid fa-xmark"></i></a>
+                <h3 id="title-modal-overlay" class="modal-title">Galerie photo</h3>
+                <div class="modal-content"></div>
+                <hr>
+                <div class="container-modal-add-and-modal-delete">
+                    <button id="modal-edit-add" class="modal-add">Ajouter une photo</button>
+                    <a href="#" class="modal-delete-all">Supprimer la galerie</a>
+                </div>
+            </div>
+            <div id="modal-edit" class="modal-edit-work">
+                <div class="container-for-icon-in-second-window-of-modal">
+                    <a id="arrow-return" href="#"><i class="fa-solid fa-arrow-left"></i></a>
+                    <a id="button-to-close-second-window" href="#"><i class="fa-solid fa-xmark"></i></a>
+                </div>
+                <h3 class="modal-title">Ajout photo</h3>
+                <form id="modal-edit-work-form" method="post" action="#">
+                    <div id= "modal-edit-new-photo" class="modal-content-new-photo">
+                        <i id= "photo-add-icon" class="fa-regular fa-image"></i>
+                        <label id="new-image">+ Ajouter photo</label>
+                        <input id="form-image" type="file" name="image" accept="image/*, .jpg, .jpeg, .png" required>
+                        <p id="photo-size">jpg, png : 4mo max</p>
+                    </div>
+                    <div class="modal-content-new-category-title">
+                        <label for="form-title">Titre</label>
+                        <input type="text" name="title" id="form-title" value="" required>
+                        <label for="form-category">Catégorie</label>
+                        <select class="choice-category" id="form-category" required>
+                            <option value=""></option>
+                        </select>
+                        <hr class="border-in-second-window-of-modal">
+                        <input type="submit" id="submit-new-work" value="Valider">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Sophie Bluel - Architecte d'intérieur</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+        <meta name="description" content="">
+        <link rel="stylesheet" href="./assets/style.css">
+        <script src="./assets/login.js"></script>
+    </head>
+    <body>
+        <header>
+            <div class="nav-for-user">
+                <h1><span class="name-of-designer">Sophie Bluel</span><span class="job-of-designer">ARCHITECTE D'INTÉRIEUR</span></h1>
+                <nav>
+                    <ul>
+                        <li><a href="index.html#portfolio">projets</a></li>
+                        <li><a href="index.html#contact">contact</a></li>
+                        <li>
+                            <a class="only-guest typography-for-login-in-user-page" href="login.html">login</a>
+                            <a id="nav-logout" class="only-admin" href="#">logout</a>
+                        </li>
+                        <li><a href="https://www.instagram.com/" target="_blank"><img class="insta-logo" src="./assets/icons/instagram.png" alt="Instagram"></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <section class= "user-login-formulary">
+                    <h2>Log in</h2>
+                    <form id="user-login-form" method="post" action="#">
+                        <label class="space-between-label-and-input-in-user-login-formulary" for="email">E-mail</label>
+                        <input type="email" name="email" id="email" required>
+                        <label class="space-between-label-and-input-in-user-login-formulary" for="password">Mot de passe</label>
+                        <input type="password" name="password" id="password" required>
+                        <input type="submit" id="submit" value="Se connecter">
+                        <a href="#">Mot de passe oublié</a>
+                    </form>
+            </section>
+        </main>
+        <footer>
+            <nav>
+                <ul>
+                    <li><a href="#">Mentions légales</a></li>
+                </ul>
+            </nav>
+        </footer>
+    </body>
+</html>
